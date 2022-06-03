@@ -13,8 +13,10 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -55,12 +57,16 @@ public class HelloApplication extends Application {
         Rectangle imageViewFive= createCloud5(scene);
         Rectangle imageViewSix= createCloud6(scene);
         Rectangle imageViewSeven= createCloud7(scene);
-        Label score = new Label("SCORE");
+        Label score = new Label("YOUR SCORE:");
+        score.setFont(Font.font("Rockwell Extra Bold",30));
+        score.setTextFill(Color.DARKSLATEBLUE);
         score.setLayoutX(20);
         score.setLayoutY(20);
 
-        scoreChange.setLayoutY(20);
-        scoreChange.setLayoutX(70);
+        scoreChange.setLayoutY(30);
+        scoreChange.setLayoutX(250);
+        scoreChange.setFont(Font.font("Rockwell Extra Bold",20));
+        scoreChange.setTextFill(Color.DARKSLATEBLUE);
 
 
         root.getChildren().addAll(imageView,imageViewOne,imageViewTwo,imageViewThree,imageViewFour,score,scoreChange,imageViewFive,imageViewSix,imageViewSeven);
